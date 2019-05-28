@@ -1,36 +1,38 @@
 
+import java.util.Scanner;
 import java.util.ArrayList;
+
 /**
- * Write a description of class Info here.
+ * Write a description of class Runner here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
 public class Notes
 {
-    private ArrayList<Word> note;
+    private static ArrayList<Sentence> notes;
     
-    public Notes(String a){
-        note = new ArrayList<Word>();
-        String[] w = a.split(" ");
-        for(String k:w){
-            if(k.indexOf("'''") > 0){
-                note.add(new Answer(k));
-            }else{
-                note.add(new NormalWord(k));
-            }
+    public Notes(){
+        notes = new ArrayList<Sentence>();
+    }
+        
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        String strInput = in.nextLine();
+        
+        while (!"quit".equalsIgnoreCase(strInput)) {
+            Sentence s = new Sentence(strInput);
+            notes.add(s);
+            s.printBlankVer();
+            strInput = in.nextLine();
+        }
+        
+        System.out.println("--------------ANSWER KEY---------------");
+        
+        for(Sentence k : notes){
+            k.printAnswerKey();
         }
     }
     
-    public void printBlankVer(){
-        for(Word a : note){
-            System.out.println(a.getWord("blank") + " ");
-        }
-    }
     
-        public void printAnswerKey(){
-        for(Word a : note){
-            System.out.println(a.getWord("words") + " ");
-        }
-    }
 }
