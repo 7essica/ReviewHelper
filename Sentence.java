@@ -8,28 +8,31 @@ import java.util.ArrayList;
  */
 public class Sentence
 {
-    private ArrayList<Word> note;
+    private ArrayList<Word> sentence;
     
     public Sentence(String a){
-        note = new ArrayList<Word>();
+        sentence = new ArrayList<Word>();
         String[] w = a.split(" ");
+        
         for(String k:w){
             if(k.indexOf("'''") > 0){
-                note.add(new Answer(k));
+                Answer ans = new Answer(k);
+                sentence.add(ans);
             }else{
-                note.add(new NormalWord(k));
+                NormalWord n = new NormalWord(k);
+                sentence.add(n);
             }
         }
     }
     
     public void printBlankVer(){
-        for(Word a : note){
+        for(Word a : sentence){
             System.out.println(a.getWord("blank") + " ");
         }
     }
     
         public void printAnswerKey(){
-        for(Word a : note){
+        for(Word a : sentence){
             System.out.println(a.getWord("words") + " ");
         }
     }

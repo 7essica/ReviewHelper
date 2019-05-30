@@ -7,16 +7,19 @@
  */
 public class NormalWord extends Word
 {
-    private String ans;
+    private String word;
 
     public NormalWord(String a)
     {
+        //word = a;
+        //where the problem is
+        //the normal word keeps being null
         super(a);
     }
     
-    
     public String getWord(String command){
-        return ans;
+        System.out.println(word);
+        return word;
     }
 
 }

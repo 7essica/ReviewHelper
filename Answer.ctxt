@@ -3,8 +3,7 @@ comment0.target=Answer
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Blank\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=ans
 comment1.target=Answer(java.lang.String)
-comment2.params=
-comment2.target=java.lang.String\ getBlank()
-comment3.params=command
-comment3.target=java.lang.String\ getWord(java.lang.String)
-numComments=4
+comment2.params=command
+comment2.target=java.lang.String\ getWord(java.lang.String)
+comment2.text=\ \ \ \ public\ String\ getBlank(){\r\n\ \ \ \ \ \ \ \ for(int\ i\ \=\ 0;\ i\ <\ this.wordLength();\ i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ blank\ +\=\ "_";\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ return\ blank;\r\n}
+numComments=3

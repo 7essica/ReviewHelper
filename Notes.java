@@ -13,12 +13,13 @@ public class Notes
     private static ArrayList<Sentence> notes;
     
     public Notes(){
-        notes = new ArrayList<Sentence>();
     }
         
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         String strInput = in.nextLine();
+        
+        notes = new ArrayList<Sentence>();
         
         while (!"quit".equalsIgnoreCase(strInput)) {
             Sentence s = new Sentence(strInput);

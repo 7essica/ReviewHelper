@@ -4,7 +4,6 @@ public abstract class Word
     private String word;
     
     public Word(String a){
-        word = a;
     }
     
     public int wordLength(){
