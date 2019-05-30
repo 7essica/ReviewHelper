@@ -4,6 +4,7 @@ public abstract class Word
     private String word;
     
     public Word(String a){
+        word = a;
     }
     
     public int wordLength(){
@@ -12,6 +13,10 @@ public abstract class Word
     
     public String getCurrentWord(){
         return word;
+    }
+    
+    public void setWord(String w){
+        word = w;
     }
     
     /*
