@@ -11,7 +11,7 @@ public class Answer extends Word
     
     public Answer(String ans)
     {
-        super(ans.substring(ans.indexOf("'''")+1));
+        super(ans.substring(ans.indexOf("x")+1));
     }
     
     /*    public String getBlank(){
@@ -27,11 +27,10 @@ public class Answer extends Word
             for(int i = 0; i < this.wordLength(); i++){
                 b += "_";
             }
-            System.out.println(b);
             return b;
         }else{
-            System.out.println(getCurrentWord());
-            return "___" + getCurrentWord() + "___";
+            //System.out.println(getCurrentWord());
+            return "\"" + getCurrentWord() + "\"";
         }
     }
     

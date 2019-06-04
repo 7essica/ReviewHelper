@@ -14,7 +14,6 @@ public class NormalWord extends Word
     }
     
     public String getWord(String command){
-        System.out.println(getCurrentWord());
         return getCurrentWord();
     }
 

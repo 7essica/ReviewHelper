@@ -25,6 +25,7 @@ public class Notes
             Sentence s = new Sentence(strInput);
             notes.add(s);
             s.printBlankVer();
+            System.out.println();
             strInput = in.nextLine();
         }
         

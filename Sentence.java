@@ -13,9 +13,10 @@ public class Sentence
     public Sentence(String a){
         sentence = new ArrayList<Word>();
         String[] w = a.split(" ");
-        
+       
         for(String k:w){
-            if(k.indexOf("'''") > 0){
+            if(k.indexOf("x") != -1){
+                System.out.println("answer found!");
                 Answer ans = new Answer(k);
                 sentence.add(ans);
             }else{
@@ -27,13 +28,13 @@ public class Sentence
     
     public void printBlankVer(){
         for(Word a : sentence){
-            System.out.println(a.getWord("blank") + " ");
+            System.out.print(a.getWord("blank") + " ");
         }
     }
     
         public void printAnswerKey(){
         for(Word a : sentence){
-            System.out.println(a.getWord("words") + " ");
+            System.out.print(a.getWord("words") + " ");
         }
     }
 }
